@@ -22,8 +22,9 @@ button {
     cursor: pointer;
 }
 
-.containener {
+.container {
     padding: 50px 0;
+    width: 100%;
 }
 
 .row {
@@ -260,4 +261,43 @@ nav {
 
 .project_desc-para {
     margin: 16px 0;
+}
+
+/* Footer */
+
+footer {
+    padding: 6% 0;
+    background-color: #242424;
+    display: flex;
+}
+
+.footer_row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_logo-img {
+    width: 70px;
+}
+
+.footer_social-link, .footer_copyright {
+    color: white;
+}
+
+.footer_social-list {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin: 28px 0;
+}
+
+.footer_link {
+    color: white;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    margin-right: 12px;
 }
