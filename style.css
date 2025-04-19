@@ -381,6 +381,11 @@ nav {
     font-weight: bold;
     text-align: center;
     padding: 28px;
+    z-index: -1;
+}
+
+.modal_overlay-visible {
+    z-index: 1;
 }
 
 .fa-spinner {
