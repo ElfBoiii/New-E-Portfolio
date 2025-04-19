@@ -122,6 +122,22 @@ a {
     width: 100%;
 }
 
+nav, 
+.scroll,
+.header {
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 650ms;
+}
+
+.modal_open nav, 
+.modal_open .scroll,
+.modal_open .header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 600ms ease;
+}
+
 /* Landing Page */
 
 #landing_page {
@@ -260,10 +276,18 @@ nav {
     width: 90%;
     max-width: 1100px;
     height: 700px;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
     border-radius: 20px;
     overflow: hidden;
     display: flex;
+    visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s, z-index 0.5s, box-shadows 0.5s ease;
+}
+
+.modal_open .modal {
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: visible;
 }
 
 .modal_half {
@@ -273,10 +297,17 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 300ms ease;
+}
+
+.modal_open .modal_about, 
+.modal_open .modal_contact {
+ transform: translateX(0%);
 }
 
 .modal_about {
     background-color: rgb(245, 245, 245);
+    transform: translateX(-110%);
 }
 
 .modal_languages {
@@ -316,6 +347,7 @@ nav {
 .modal_contact {
     background-color: #242424;
     color: white;
+    transform: translateX(110%);
 }
 
 .modal_title {
@@ -364,7 +396,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -386,6 +418,7 @@ nav {
 
 .modal_overlay-visible {
     z-index: 1;
+    display: flex;
 }
 
 .fa-spinner {

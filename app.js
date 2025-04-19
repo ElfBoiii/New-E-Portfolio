@@ -1,6 +1,3 @@
-// template_0ddd54w
-//service_885vbhk
-// oXCU5K3kX6dWc7Q2o
 
 function contact(event) {
     event.preventDefault();  
@@ -23,4 +20,13 @@ function contact(event) {
                 'The email service is temporarily unavailable. Please contact me directly at briggs.carter29@gmail.com'
             )
         })
+}
+let isModalOpen = false;
+function toggleModal () {
+    if (isModalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove('modal_open')
+    }
+    isModalOpen = true;
+    document.body.classList += ' modal_open'
 }
