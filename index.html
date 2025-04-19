@@ -23,13 +23,13 @@
   </head>
 
   <body>
-    <section id="landing_page">
+    <section id="landing_page" onmousemove="moveBackGround(event)">
       <nav>
         <figure>
           <img id="personal-logo" src="./assets/Portfolio_Photo.jpg" alt="" />
         </figure>
         <ul class="nav_link-list">
-          <li class="nav_link">
+          <li class="nav_link" onclick="toggleModal ()">
             <a
               href="#"
               class="nav_link-anchor link_hover-effect link_hover-effect--black"
@@ -38,16 +38,15 @@
           </li>
           <li class="nav_link">
             <a
-              href="#"
+              href="#projects"
               class="nav_link-anchor link_hover-effect link_hover-effect--black"
               >Projects</a
             >
           </li>
-          <li class="nav_link">
+          <li class="nav_link" onclick="toggleModal ()">
             <a
               href="#"
               class="nav_link-anchor link_hover-effect link_hover-effect--black"
-              onclick="toggleModal ()"
               >Contact</a
             >
           </li>
@@ -89,9 +88,11 @@
           </div>
         </div>
       </header>
+      <a href="#">
       <button class="mail_btn click" onclick="toggleModal()" >
         <i class="fa-solid fa-envelope"></i>
       </button>
+        </a>
       <a href="#projects" class="scroll">
         <div class="scroll_icon click"></div>
       </a>
@@ -172,6 +173,15 @@
             </div>
         </div>
       </div>
+      <img src="./assets/semi circle.svg" class="shape shape-0">
+      <img src="./assets/circle.svg" class="shape shape-1">
+      <img src="./assets/squiggly.svg" class="shape shape-2">
+      <img src="./assets/circle.svg" class="shape shape-3">
+      <img src="./assets/triangle.svg" class="shape shape-4">
+      <img src="./assets/circle.svg" class="shape shape-5">
+      <img src="./assets/squiggly.svg" class="shape shape-6">
+      <img src="./assets/circle.svg" class="shape shape-7">
+      <img src="./assets/semi circle.svg" class="shape shape-8">
     </section>
     <section id="projects">
       <div class="container">
@@ -276,13 +286,13 @@
           </figure>
           <div class="footer_social-list">
             <a
-              href="https://github.com/ElfBoiii"
+              href="https://github.com/ElfBoiii" target="_blank"
               class="footer_link link_hover-effect link_hover-effect--white"
             >
               GitHub
             </a>
             <a
-              href=""
+              href="" 
               class="footer_link link_hover-effect link_hover-effect--white"
             >
               Instagram
